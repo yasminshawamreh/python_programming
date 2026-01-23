@@ -1,0 +1,15 @@
+# 3.3 My Own List
+
+cars = ['Lexus', 'BMW', 'Mercedes-Benz', 'Audi', 'Ferrari', 'Bugatti', 'Bentley', 'Porsche']
+
+message = f"I would like to own a {cars[5].title()}."
+print(message)
+
+message = f"I heard that {cars[6].title()} luxury cars ride very smooth while you drive them."
+print(message)
+
+message = f"{cars[4].title()}'s are luxury cars that can drive very fast."
+print(message)
+
+message = f"The most beautiful luxury car is definitely a {cars[-1].title()}."
+print(message)
