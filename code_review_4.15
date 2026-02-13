@@ -1,0 +1,28 @@
+# Code Review 
+
+# 1 - Animals
+animals = ['seal', 'dolphin', 'whale']
+for animal in animals:
+    print(f"A {animal} loves to swim.")
+
+print(
+    "All of these animals love to swim. "
+    "Take care of the ocean because it is their home!\n"
+)
+
+
+# 2 - Magicians
+magicians = ['alice', 'david', 'carolina']
+for magician in magicians:
+    print(f"{magician.title()}, that was a great trick!")
+    print(f"I can't wait to see your next trick, {magician.title()}.\n")
+
+print("Thank you, everyone. That was a great magic show!\n")
+
+
+# 3 - Players
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+
+print("Here are the first three players on my team:")
+for player in players[:3]:
+    print(player.title())
