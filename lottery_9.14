@@ -1,0 +1,15 @@
+# 9.14 Lottery
+
+import random
+num_letters_mix = ['c', 't', 10, 'f', 'i', 2, 4, 'y', 1, 0, 9, 8, 3, 6, 7]
+
+lottery = random.sample(num_letters_mix, 5)
+
+user_guess = input("Enter 4 numbers and 1 letter: ").split()
+
+if user_guess == lottery:
+    print("Winner!")
+else:
+    print("Not a winner.")
+
+print("Winning numbers:", lottery)
