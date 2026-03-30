@@ -1,0 +1,59 @@
+# 9.5 Login Attempts 
+
+class Login:
+    """Login Attempts/Copy of Users."""
+
+    def __init__(self, first_name, last_name, birthdate, username, password):
+        """Initialize user info."""
+        self.first_name = first_name 
+        self.last_name = last_name 
+        self.birthdate = birthdate
+        self.username = username 
+        self.password = password 
+        self.login_attempts = 0
+
+    def describe_user(self):
+        """Prints a summary of user's information."""
+        print(f"Name: {self.first_name} {self.last_name}\nBirthdate: {self.birthdate}\nUsername: {self.username}\nPassword: {self.password}")
+
+    def greet_user(self):
+        """Prints a personalized greeting to the user."""
+        print(f"\nWelcome {self.first_name} {self.last_name}!\n")
+
+    def increment_login_attempts(self):
+        """Increments the value of login_attempts by 1."""
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+# Jane Austen - User 1
+        
+user_one = Login('Jane', 'Austen', 'December 16th, 1775', 'jAusten22', 'ilovejaneaustinsomucH')
+user_one.describe_user()
+user_one.greet_user()
+
+user_one.increment_login_attempts()
+user_one.increment_login_attempts()
+user_one.increment_login_attempts()
+print(f"Login attempts: {user_one.login_attempts}")
+
+user_one.reset_login_attempts()
+print(f"Login reset: {user_one.login_attempts}\n")
+
+# Muhammad Ali - User 2
+
+user_two = Login('Muhammad', 'Ali', 'January 17th, 1942', 'mAli1942', 'stingsLikeABee')
+user_two.describe_user()
+user_two.greet_user()
+
+user_two.increment_login_attempts()
+user_two.increment_login_attempts()
+user_two.increment_login_attempts()
+user_two.increment_login_attempts()
+user_two.increment_login_attempts()
+user_two.increment_login_attempts()
+print(f"Login attempts: {user_two.login_attempts}")
+
+user_two.reset_login_attempts()
+print(f"Login reset: {user_two.login_attempts}")
