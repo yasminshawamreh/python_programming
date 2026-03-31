@@ -1,15 +1,19 @@
 # 9.14 Lottery
 
 import random
-num_letters_mix = ['c', 't', 10, 'f', 'i', 2, 4, 'y', 1, 0, 9, 8, 3, 6, 7]
 
-lottery = random.sample(num_letters_mix, 5)
+letters = ['c', 't', 'f', 'i', 'y']
+numbers = [5, 2, 4, 1, 0, 9, 8, 3, 6, 7]
+
+lottery = random.sample(numbers, 4) + random.sample(letters, 1)
+random.shuffle(lottery)
+
+print("Winning Lottery:", lottery)
 
 user_guess = input("Enter 4 numbers and 1 letter: ").split()
+user_guess = [int(x) for x in user_guess[:4]] + [user_guess[4].lower()]
 
-if user_guess == lottery:
+if set(user_guess) == set(lottery):
     print("Winner!")
 else:
     print("Not a winner.")
-
-print("Winning numbers:", lottery)
