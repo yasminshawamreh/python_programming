@@ -1,0 +1,25 @@
+# 10.6 Addition
+
+while True:
+    try:
+        num1 = input("Enter the first number (or 'q' to quit): ")
+        if num1.lower() == 'q':
+            break
+
+        num2 = input("Enter the second number (or 'q' to quit): ")
+        if num2.lower() == 'q':
+            break
+
+        # Convert inputs to integers
+        num1 = int(num1)
+        num2 = int(num2)
+
+    except ValueError:
+        print("Oops! Please enter valid numbers only.\n")
+        continue
+
+    else:
+        total = num1 + num2
+        print(f"The sum is: {total}\n")
+
+print("Goodbye!")
