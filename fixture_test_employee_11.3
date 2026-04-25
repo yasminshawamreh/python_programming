@@ -1,0 +1,18 @@
+import pytest
+from employee import Employee
+
+@pytest.fixture
+def employee():
+    """An employee test that will be available to all test functions."""
+    return Employee('Test', 'User', 50000)
+
+def test_give_default_raise(employee):
+    """Give default raise."""
+    employee.give_raise()
+    assert employee.annual_salary == 55000
+
+
+def test_give_custom_raise(employee):
+    """"Give custom raise."""
+    employee.give_raise(10000)
+    assert employee.annual_salary == 60000
