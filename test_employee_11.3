@@ -1,0 +1,14 @@
+from employee import Employee
+
+def test_give_default_raise():
+    """Give default raise."""
+    emp = Employee('Mohammed', 'Ali', 50000)
+    emp.give_raise()
+    assert emp.annual_salary == 55000
+
+
+def test_give_custom_raise():
+    """"Give custom raise."""
+    emp = Employee('Nina', 'Simone', 60000)
+    emp.give_raise(10000)
+    assert emp.annual_salary == 70000
